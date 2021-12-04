@@ -6,19 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <input placeholder="insert input here" type="text">
 
 
 <script>
     //  that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’.
 // The Losing messeges are like: " "You Lose! Paper beats Rock" "
-//                        " "You Lose! Rock beats Scissor" "
-//                        " "You Lose! Scissor beats Paper" "
+        //                        " "You Lose! Rock beats Scissor" "
+        //                        " "You Lose! Scissor beats Paper" "
 
 // The Winning messeges are like: " "You Lose! Paper beats Rock" "
-//                        " "You Lose! Rock beats Scissor" "
-//                        " "You Lose! Scissor beats Paper" "` 
+//                        " "You win! Rock beats Scissor" "
+//                        " "You win! Scissor beats Paper" "` 
 
 
 
@@ -60,22 +62,63 @@
     // Tip: use the console to make sure this is returning the expected output before moving to the next step!
 
 
+// My first function!!!!!!!!!!!!!!!!!!!!
+let rock = "rock"
+let scissors = "scissors"
+let paper = "paper"  
+let rPsGameArrey = [rock, paper, scissors];
+let playerSelection= prompt("You have three options: Please enter rock, paper or scissors ").toLowerCase;
+rock > scissors;
+paper > rock;
+scissors > paper;
 
-    
+/////////////////////////////////////////////////////////////
+
+// only gives me one line string `rock`, `parer`, or `scissors`
  let computerPlay = function ( ){
- 
-    let rPsGameArrey = ["Rock", "Papers", "Scissors"];
-
+     
     let randomItem = rPsGameArrey[Math.floor(Math.random()*rPsGameArrey.length)];
     
     return randomItem;
  }
+let  computerSelection = computerPlay();
 
- console.log(computerPlay());
+console.log(rock);
+ function playRound(playerSelection, computerSelection) {
+ 
+;
 
 
 
-let game = function (){}
+if (playerSelection !== rock || playerSelection !== scissors ||playerSelection !== paper){
+    prompt`please enter a valid text`;
+}
+if (playerSelection === computerPlay){
+    return `Draw!!!!!!`
+}
+if (playerSelection > computerSelection){
+    return `you win! ${playerSelection}  beats ${computerSelection}`
+}
+if (playerSelection < computerSelection){
+    return `you lose! ${computerSelection} beats ${playerSelection}`
+}
+
+ 
+
+}
+
+console.log(playRound(playerSelection, computerSelection));
+
+ 
+
+
+function game (){
+    for (let index = 0; index < 5; index++) {
+       playRound()
+    }
+}
+game();
+
 
 </script>
     
