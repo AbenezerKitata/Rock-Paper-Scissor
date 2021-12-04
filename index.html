@@ -13,110 +13,72 @@
 
 
 <script>
-    //  that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’.
-// The Losing messeges are like: " "You Lose! Paper beats Rock" "
-        //                        " "You Lose! Rock beats Scissor" "
-        //                        " "You Lose! Scissor beats Paper" "
 
-// The Winning messeges are like: " "You Lose! Paper beats Rock" "
-//                        " "You win! Rock beats Scissor" "
-//                        " "You win! Scissor beats Paper" "` 
-
-
-
-// r > s
-// s > p
-// p > r
-// randomly returns either rock paper or scissora
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-
-
-
-
-    //  let rock;
-    //  let paper;
-    //  let scissors;
-    // rock >scissors;
-    // paper > scissors;
-    // scissors > paper;
-
-    // Your game is going to play against the computer, so begin with a function 
-    // called computerPlay that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’.
-    // We’ll use this function in the game to make the computer’s play. 
-    // Tip: use the console to make sure this is returning the expected output before moving to the next step!
-
-
-// My first function!!!!!!!!!!!!!!!!!!!!
 let rock = "rock"
 let scissors = "scissors"
-let paper = "paper"  
+let paper = "paper" 
 let rPsGameArrey = [rock, paper, scissors];
-let playerSelection= prompt("You have three options: Please enter rock, paper or scissors ").toLowerCase;
-rock > scissors;
-paper > rock;
-scissors > paper;
+let userInput = prompt(`please enter either paper, rock or scissor`)
 
-/////////////////////////////////////////////////////////////
-
-// only gives me one line string `rock`, `parer`, or `scissors`
- let computerPlay = function ( ){
+// let userInput  = prompt("please enter either rock paper or scissors")
+let computerPlay = function ( ){
      
     let randomItem = rPsGameArrey[Math.floor(Math.random()*rPsGameArrey.length)];
     
     return randomItem;
  }
+ 
 let  computerSelection = computerPlay();
 
-console.log(rock);
- function playRound(playerSelection, computerSelection) {
- 
-;
+function whatHappens(userInput, computer) {
+    if (userInput == computer) {
+        prompt("draw")
+    }
+    //                            you win! 
+    else if (userInput == "rock" && computer == "scissor") {
+        prompt(`You entered ${userInput} the computer has entered ${computerSelection} you win! `);
+    }
+      //                            you lose! 
+    else if (userInput == "paper" && computer == "scissor") {
+        prompt(`You entered ${userInput} the computer has entered ${computerSelection} you lose! `);
+        
+    }
+      //                            you lose! 
+    else if (userInput === "rock" && computer === "paper") {
+        prompt(`You entered ${userInput} the computer has entered ${computerSelection} you lose! `);
+        
+    }
+      //                            you win! 
+    else if (userInput === "scissor" && computer === "paper") {
+        prompt(`You entered ${userInput} the computer has entered ${computerSelection} you win! `);
+        
+    }
+      //                            you win! 
+    else if (userInput === "paper" && computer === "rock") {
+         prompt(`You entered ${userInput} the computer has entered ${computerSelection} you win! `);
+        
+    }
+      //                            you lose! 
+    else if (userInput === "scissor" && computer === "rock") {
+         prompt(`You entered ${userInput} the computer has entered ${computerSelection} you lose! `);
+        
+    }
+    //                              if you made a mistake
+    else{
+        prompt(`You entered ${userInput}  please check your spelling `);
+       
+    }
 
 
-
-if (playerSelection !== rock || playerSelection !== scissors ||playerSelection !== paper){
-    prompt`please enter a valid text`;
 }
-if (playerSelection === computerPlay){
-    return `Draw!!!!!!`
-}
-if (playerSelection > computerSelection){
-    return `you win! ${playerSelection}  beats ${computerSelection}`
-}
-if (playerSelection < computerSelection){
-    return `you lose! ${computerSelection} beats ${playerSelection}`
-}
 
- 
-
-}
-
-console.log(playRound(playerSelection, computerSelection));
-
- 
-
+let playRound = whatHappens(userInput, computerSelection)
 
 function game (){
-    for (let index = 0; index < 5; index++) {
-       playRound()
+        for (let index = 0; index < 5; index++) {
+         return   playRound;
+        }
     }
-}
 game();
 
 
