@@ -18,7 +18,7 @@ let rock = "rock"
 let scissors = "scissors"
 let paper = "paper" 
 let rPsGameArrey = [rock, paper, scissors];
-let userInput = prompt(`please enter either paper, rock or scissor`)
+let userInput = prompt(`please enter either paper, rock or scissor`,        )
 
 // let userInput  = prompt("please enter either rock paper or scissors")
 let computerPlay = function ( ){
@@ -32,14 +32,14 @@ let  computerSelection = computerPlay();
 
 function whatHappens(userInput, computer) {
     if (userInput == computer) {
-        prompt("draw")
+        prompt(`You entered ${userInput} the computer has entered ${computerSelection} draw!! `)
     }
     //                            you win! 
-    else if (userInput == "rock" && computer == "scissor") {
+    else if (userInput === "rock" && computer === "scissor") {
         prompt(`You entered ${userInput} the computer has entered ${computerSelection} you win! `);
     }
       //                            you lose! 
-    else if (userInput == "paper" && computer == "scissor") {
+    else if (userInput === "paper" && computer === "scissor") {
         prompt(`You entered ${userInput} the computer has entered ${computerSelection} you lose! `);
         
     }
@@ -64,10 +64,10 @@ function whatHappens(userInput, computer) {
         
     }
     //                              if you made a mistake
-    else{
-        prompt(`You entered ${userInput}  please check your spelling `);
+    else {prompt(`You entered ${userInput}  please check your spelling `);}
+    
        
-    }
+    
 
 
 }
@@ -79,7 +79,6 @@ function game (){
          return   playRound;
         }
     }
-game();
 
 
 </script>
