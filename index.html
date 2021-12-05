@@ -18,9 +18,9 @@ let rock = "rock"
 let scissors = "scissors"
 let paper = "paper" 
 let rPsGameArrey = [rock, paper, scissors];
-let userInput = prompt(`please enter either paper, rock or scissor`,        )
+let userInput ;
 
-// let userInput  = prompt("please enter either rock paper or scissors")
+// let userInput  = return("please enter either rock paper or scissors")
 let computerPlay = function ( ){
      
     let randomItem = rPsGameArrey[Math.floor(Math.random()*rPsGameArrey.length)];
@@ -30,14 +30,15 @@ let computerPlay = function ( ){
  
 let  computerSelection = computerPlay();
 
-function whatHappens(userInput, computer) {
+let  whatHappens = function (userInput, computer) {
+    userInput = prompt(`please enter either paper, rock or scissor`,        )
     if (userInput == computer) {
         prompt(`You entered ${userInput} the computer has entered ${computerSelection} draw!! `)
     }
     //                            you win! 
     else if (userInput === "rock" && computer === "scissor") {
         prompt(`You entered ${userInput} the computer has entered ${computerSelection} you win! `);
-    }
+    }   
       //                            you lose! 
     else if (userInput === "paper" && computer === "scissor") {
         prompt(`You entered ${userInput} the computer has entered ${computerSelection} you lose! `);
@@ -72,14 +73,14 @@ function whatHappens(userInput, computer) {
 
 }
 
-let playRound = whatHappens(userInput, computerSelection)
+
 
 function game (){
         for (let index = 0; index < 5; index++) {
-         return   playRound;
+        whatHappens(userInput, computerSelection);
         }
     }
-
+game();
 
 </script>
     
