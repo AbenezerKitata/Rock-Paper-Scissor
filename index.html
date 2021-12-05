@@ -32,6 +32,7 @@ let  computerSelection = computerPlay();
 
 let  whatHappens = function (userInput, computer) {
     userInput = prompt(`please enter either paper, rock or scissor`,        )
+    userInput = userInput.toLowerCase();
     if (userInput == computer) {
         prompt(`You entered ${userInput} the computer has entered ${computerSelection} draw!! `)
     }
