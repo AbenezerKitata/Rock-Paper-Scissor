@@ -14,66 +14,57 @@
 
 <script>
 
-let rock = "rock"
-let scissors = "scissors"
-let paper = "paper" 
-let rPsGameArrey = [rock, paper, scissors];
+let r = "rock"
+let s = "scissors"
+let p = "paper" 
+let rPsGameArrey = [r, p, s];
 let userInput ;
 
-// let userInput  = return("please enter either rock paper or scissors")
-let computerPlay = function ( ){
+
+let computerPlay =( )=>{
      
-    let randomItem = rPsGameArrey[Math.floor(Math.random()*rPsGameArrey.length)];
+ return rPsGameArrey[Math.floor(Math.random()*rPsGameArrey.length)];
     
-    return randomItem;
  }
  let  computerSelection = computerPlay().toLowerCase();
 
-let  whatHappens = function (userInput, computer) {
-    userInput = prompt(`please enter either paper, rock or scissor`,        )
+let  whatHappens = (userInput, computer)=> {
+    userInput = prompt(`please enter either paper, rock or scissor`,        ).toLowerCase()
     
-
-    
-    userInput = userInput.toLowerCase();
-    if (userInput == computer) {
+    if (userInput === computer) {
         prompt(`You entered ${userInput} the computer has entered ${computerSelection} draw!! `)
     }
     //                            you win! 
-    else if (userInput === "rock" && computer === "scissor") {
-        prompt(`You entered ${userInput} the computer has entered ${computerSelection} you win! `);
+    else if (userInput === r && computer === s) {
+        prompt(`You entered ${userInput}. the computer has entered ${computerSelection} you win! `);
     }   
       //                            you lose! 
-    else if (userInput === "paper" && computer === "scissor") {
+    else if (userInput === p && computer === s) {
         prompt(`You entered ${userInput} the computer has entered ${computerSelection} you lose! `);
         
     }
       //                            you lose! 
-    else if (userInput === "rock" && computer === "paper") {
+    else if (userInput === r && computer === p) {
         prompt(`You entered ${userInput} the computer has entered ${computerSelection} you lose! `);
         
     }
       //                            you win! 
-    else if (userInput === "scissor" && computer === "paper") {
+    else if (userInput === s && computer === p) {
         prompt(`You entered ${userInput} the computer has entered ${computerSelection} you win! `);
         
     }
       //                            you win! 
-    else if (userInput === "paper" && computer === "rock") {
+    else if (userInput === p && computer === r) {
          prompt(`You entered ${userInput} the computer has entered ${computerSelection} you win! `);
         
     }
       //                            you lose! 
-    else if (userInput === "scissor" && computer === "rock") {
+    else if (userInput === s && computer === r) {
          prompt(`You entered ${userInput} the computer has entered ${computerSelection} you lose! `);
         
     }
     //                              if you made a mistake
-    else {prompt(`You entered ${userInput}  please check your spelling `);}
-    
-       
-    
-
-
+    else {prompt(`You entered ${userInput}  please check your spelling `);} 
 }
 
 
