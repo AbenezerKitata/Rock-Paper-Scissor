@@ -1,9 +1,37 @@
+let rockbutton = document.getElementById('rock');
+let paperbutton = document.getElementById('paper');
+let scissorbutton = document.getElementById('scissor');
+let result = document.getElementById('result');
+let buttons = document.querySelectorAll("buttons")
+rockbutton.addEventListener('click',game)
+paperbutton.addEventListener('click',game)
+scissorbutton.addEventListener('click',game)
 
-let r = "rock"
-let s = "scissors"
-let p = "paper" 
+
+
+
+
+let workingGame = (e)=>{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+let r = rockbutton;
+let s = scissorbutton;
+let p = paperbutton; 
 let rPsGameArrey = [r, p, s];
-let userInput ;
+
 
 
 let computerPlay =( )=>{
@@ -11,52 +39,51 @@ let computerPlay =( )=>{
  return rPsGameArrey[Math.floor(Math.random()*rPsGameArrey.length)];
     
  }
- let  computerSelection = computerPlay().toLowerCase();
+//  let  computerSelection = computerPlay()
 
-let  whatHappens = (userInput, computer)=> {
-    userInput = prompt(`please enter either paper, rock or scissor`,        ).toLowerCase()
+let  playRound = (button, computer)=> {
+
     
-    if (userInput === computer) {
-        prompt(`You entered ${userInput} the computer has entered ${computerSelection} draw!! `)
-    }
+     (button === computer)? 
+        console.log(`You entered ${button} the computer has entered ${computerSelection} draw!! `):
+    
     //                            you win! 
-    else if (userInput === r && computer === s) {
-        prompt(`You entered ${userInput}. the computer has entered ${computerSelection} you win!`);
-    }   
+    (button === r && computer === s)? 
+        console.log(`You entered ${button}. the computer has entered ${computerSelection} you win!`):
+      
       //                            you lose! 
-    else if (userInput === p && computer === s) {
-        prompt(`You entered ${userInput} the computer has entered ${computerSelection} you lose! `);
+   (button === p && computer === s)? 
+        console.log(`You entered ${button} the computer has entered ${computerSelection} you lose! `):
         
-    }
+    
       //                            you lose! 
-    else if (userInput === r && computer === p) {
-        prompt(`You entered ${userInput} the computer has entered ${computerSelection} you lose! `);
+    (button === r && computer === p) ?
+        console.log(`You entered ${button} the computer has entered ${computerSelection} you lose! `):
         
-    }
+    
       //                            you win! 
-    else if (userInput === s && computer === p) {
-        prompt(`You entered ${userInput} the computer has entered ${computerSelection} you win! `);
+    (button === s && computer === p)?                console.log(`You entered ${button} the computer has entered ${computerSelection} you win! `):
         
-    }
+
       //                            you win! 
-    else if (userInput === p && computer === r) {
-         prompt(`You entered ${userInput} the computer has entered ${computerSelection} you win! `);
+    (button === p && computer === r)? 
+         console.log(`You entered ${button} the computer has entered ${computerSelection} you win! `):
         
-    }
+    
       //                            you lose! 
-    else if (userInput === s && computer === r) {
-         prompt(`You entered ${userInput} the computer has entered ${computerSelection} you lose! `);
+   (button === s && computer === r)?
+         console.log(`You entered ${button} the computer has entered ${computerSelection} you lose! `): 
+         console.log("please click one of the buttons");
         
-    }
+
     //                              if you made a mistake
-    else {prompt(`You entered ${userInput}  please check your spelling `);} 
-}
+ }
 
 
 // this is the repeater of our main function
-// function game (){
-//         for (let index = 0; index < 5; index++) {
-//         whatHappens(userInput, computerSelection);
-//         }
-//     }
-// game();
+function game (){
+        for (let index = 0; index < 5; index++) {
+        playRound(buttons, computerPlay);
+        }
+    }
+game();

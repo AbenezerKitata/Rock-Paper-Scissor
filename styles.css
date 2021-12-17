@@ -1,0 +1,27 @@
+.display-none{
+}
+
+.gradient{
+background: #CE8ECE;
+background: -moz-linear-gradient(left, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
+background: -webkit-linear-gradient(left, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
+background: linear-gradient(to right, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
+}
+
+.buttons{
+    height: 52px;
+    padding-left: 36px;
+    padding-right: 10px;
+    border: 1px solid #000000;
+    background: #ff9900  no-repeat 10px center;
+    cursor: pointer;
+}
+#wrapper{
+    width: 500px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
