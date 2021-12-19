@@ -1,22 +1,77 @@
-let rockbutton = document.getElementById('rock');
-let paperbutton = document.getElementById('paper');
-let scissorbutton = document.getElementById('scissor');
-let result = document.getElementById('result');
+let r = document.getElementById('rock');
+let p = document.getElementById('paper');
+let s = document.getElementById('scissor');
+let gameArray = document.querySelectorAll('buttons')
+let parentResult = document.getElementById('result');
 let buttons = document.querySelectorAll("buttons")
-rockbutton.addEventListener('click',game)
-paperbutton.addEventListener('click',game)
-scissorbutton.addEventListener('click',game)
+var result = document.createElement('result');
+gameArray.forEach(button=>{
+  button.addEventListener('click', playRound())
+})
 
-
-
-
-
-let workingGame = (e)=>{
-    
+let computerPlay =( )=>{   
+  return gameArray[Math.floor(Math.random()*gameArray.length)];   
+  }
+function playRound (gArray, computer) {
+  let w = "win";
+  let l = "lose"
+  for (let index = 0; index < gArray.length; index++) {
+    const button = gArray[index];
+    if (button === computer){return "Draw"}  
+    if (button === s && computer === r){
+    var newDiv = document.createElement('p');
+    newDiv.textContent = l;
+    result.appendChild(newDiv)} 
+    if (button === p && computer === s)
+    {    var newDiv = document.createElement('p');
+    newDiv.textContent = l;
+    result.appendChild(newDiv)}
+    if (button === r && computer === p)
+    {    var newDiv = document.createElement('p');
+    newDiv.textContent = l;
+    result.appendChild(newDiv)}
+    if (button === s && computer === p)
+    {    var newDiv = document.createElement('p');
+    newDiv.textContent = w;
+    result.appendChild(newDiv)}
+    if (button === r && computer === s)
+    {    var newDiv = document.createElement('p');
+    newDiv.textContent = w;
+    result.appendChild(newDiv)} 
+    if (button === p && computer === r)
+    {    var newDiv = document.createElement('p');
+    newDiv.textContent = w;
+    result.appendChild(newDiv)}  
+  }
+       
 }
 
 
 
+buttons.forEach(btn=>{
+  btn.addEventListener('click', playRound)
+})
+
+ 
+
+
+ let playfunction = playRound(gameArray, computerPlay());
+
+
+// let win = ()=>{ result.textContent = 'You won'}
+// let loss = ()=>{ result.textContent = 'You Lost'}
+
+
+
+let howManyRounds = ()=>{
+ document.write('How Many Rounds?')
+}
+
+// var newDiv = document.createElement('----text----');
+// newDiv.classList.add('----text----');
+// newDiv.classList.remove('----text----');
+// newDiv.classList.contains('----text----');
+// result.appendChild(newDiv)
 
 
 
@@ -27,63 +82,17 @@ let workingGame = (e)=>{
 
 
 
-let r = rockbutton;
-let s = scissorbutton;
-let p = paperbutton; 
-let rPsGameArrey = [r, p, s];
+
+
+// //  let  computerSelection = computerPlay()
 
 
 
-let computerPlay =( )=>{
-     
- return rPsGameArrey[Math.floor(Math.random()*rPsGameArrey.length)];
-    
- }
-//  let  computerSelection = computerPlay()
 
-let  playRound = (button, computer)=> {
-
-    
-     (button === computer)? 
-        console.log(`You entered ${button} the computer has entered ${computerSelection} draw!! `):
-    
-    //                            you win! 
-    (button === r && computer === s)? 
-        console.log(`You entered ${button}. the computer has entered ${computerSelection} you win!`):
-      
-      //                            you lose! 
-   (button === p && computer === s)? 
-        console.log(`You entered ${button} the computer has entered ${computerSelection} you lose! `):
-        
-    
-      //                            you lose! 
-    (button === r && computer === p) ?
-        console.log(`You entered ${button} the computer has entered ${computerSelection} you lose! `):
-        
-    
-      //                            you win! 
-    (button === s && computer === p)?                console.log(`You entered ${button} the computer has entered ${computerSelection} you win! `):
-        
-
-      //                            you win! 
-    (button === p && computer === r)? 
-         console.log(`You entered ${button} the computer has entered ${computerSelection} you win! `):
-        
-    
-      //                            you lose! 
-   (button === s && computer === r)?
-         console.log(`You entered ${button} the computer has entered ${computerSelection} you lose! `): 
-         console.log("please click one of the buttons");
-        
-
-    //                              if you made a mistake
- }
-
-
-// this is the repeater of our main function
-function game (){
-        for (let index = 0; index < 5; index++) {
-        playRound(buttons, computerPlay);
-        }
-    }
-game();
+// // this is the repeater of our main function
+// function game (){
+//         for (let index = 0; index < 5; index++) {
+//         playRound(buttons, computerPlay);
+//         }
+//     }
+// game();
