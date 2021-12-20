@@ -26,13 +26,35 @@ font-family: "Times New Roman", Times, serif;
 font-size: 30px;
 letter-spacing: 0px;
 word-spacing: 0px;
-color: #000000;
-font-weight: 400;
+color: #332f2f;
+font-weight: 200;
 text-decoration: none;
 font-style: normal;
 font-variant: small-caps;
 text-transform: none;
 }
-.howManyRounds{
+.win{
+font-family: "Times New Roman", Times, serif;
+font-size: 50px;
+letter-spacing: 2px;
+word-spacing: 1px;
+color: #048a30;
+font-weight: 800;
+text-decoration: none;
+font-style: normal;
+font-variant:normal;
+text-transform:uppercase;
+}
+.lose{
+font-family: "Times New Roman", Times, serif;
+font-size: 20px;
+letter-spacing: 0px;
+word-spacing: 1px;
+color: #9e0000;
+font-weight: 100;
+text-decoration: none;
+font-style: normal;
+font-variant:small-caps;
+text-transform:lowercase;
 
 }
