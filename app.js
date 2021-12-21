@@ -1,4 +1,4 @@
-const rpsGameArray = ["Rock", "Paper", "Scissors"];
+const rpsGameArray = ["Rock", "Paper", "Scissor"];
 function computerPlay() {
 return rpsGameArray[~~(Math.random() * 3)].toLowerCase();
 }
@@ -9,8 +9,6 @@ let counter;
     let newDiv = document.createElement('p')
     if (button === computer)
     {   newDiv.textContent = "Its a draw";
-    counter = 0;
-
     newDiv.classList.add('draw');
     result.appendChild(newDiv)}  
     else if (button === "scissor" && computer === "rock" || button === "paper" && computer === "scissor" || button === "rock" && computer === "paper")
@@ -30,3 +28,5 @@ buttons.forEach(btn=>{
     let computerResult = computerPlay();
   playRound(playerSelection, computerResult)
   })})
+
+ 

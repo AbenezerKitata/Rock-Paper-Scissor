@@ -1,24 +1,39 @@
-.display-none{
+*{
+    margin: 0;
+    padding: 0;
 }
-
-.gradient{
+body{
+display:flex;
 background: #CE8ECE;
 background: -moz-linear-gradient(left, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
 background: -webkit-linear-gradient(left, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
 background: linear-gradient(to right, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
+border: 2px solid cadetblue;
+height: 61em;  
+align-items: center;
+justify-content: center;
 }
 
 .buttons{
     height: 52px;
     cursor: pointer;
 }
+.buttons:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.5);
+    color: #ff7a59;
+    background: grey;
+  }
 #wrapper{
-    width: 500px;
-    height: 800px;
+    border: 2px solid cadetblue;
+    width: 200px;
+    height: 200px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
+
+   
     
 }
 .draw{
@@ -56,5 +71,7 @@ text-decoration: none;
 font-style: normal;
 font-variant:small-caps;
 text-transform:lowercase;
-
+}
+.result{
+    
 }
