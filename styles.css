@@ -2,18 +2,14 @@
     margin: 0;
     padding: 0;
 }
-body{
-display:flex;
-background: #CE8ECE;
-background: -moz-linear-gradient(left, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
-background: -webkit-linear-gradient(left, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
-background: linear-gradient(to right, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
-border: 2px solid cadetblue;
-height: 61em;  
-align-items: center;
-justify-content: center;
+#buttonsWrapper{
+    display: flex;
+    height: 300px;
+    width: 800px;
+    align-items: center;
+    justify-content: center;
+    gap: 180px;
 }
-
 .buttons{
     height: 52px;
     cursor: pointer;
@@ -26,13 +22,15 @@ justify-content: center;
     background: grey;
   }
 #wrapper{
+    background: #CE8ECE;
+    background: -moz-linear-gradient(left, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
+    background: -webkit-linear-gradient(left, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
+    background: linear-gradient(to right, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
     border: 2px solid cadetblue;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: space-evenly;
+    min-width: 300px;
+    height: 60em;  
     align-items: center;
-
+    justify-content: center;
    
     
 }
@@ -50,15 +48,15 @@ text-transform: none;
 }
 .win{
 font-family: "Times New Roman", Times, serif;
-font-size: 50px;
+font-size: 30px;
 letter-spacing: 2px;
 word-spacing: 1px;
 color: #048a30;
-font-weight: 800;
+font-weight: 200;
 text-decoration: none;
 font-style: normal;
 font-variant:normal;
-text-transform:uppercase;
+
 }
 .lose{
 font-family: "Times New Roman", Times, serif;
@@ -72,6 +70,23 @@ font-style: normal;
 font-variant:small-caps;
 text-transform:lowercase;
 }
-.result{
-    
+#result{
+    text-align: center;
 }
+#resetButton{
+    margin-left: 80px;
+    text-align: center;
+}
+#rstbtn{
+    background: #239ba4;
+    height: 40px;
+    width: 60px;
+    color: white;
+    cursor: pointer;
+}
+#rstbtn:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.1);
+    
+  }
