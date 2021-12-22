@@ -74,7 +74,6 @@ text-transform:lowercase;
     text-align: center;
 }
 #resetButton{
-    margin-left: 80px;
     text-align: center;
 }
 #rstbtn{
@@ -88,5 +87,4 @@ text-transform:lowercase;
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.1);
-    
   }

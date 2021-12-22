@@ -18,16 +18,12 @@ function refreshPage(){
 } 
 function playRound(player, computer) {
   function displayScore() {
-    if (computerCounter === 6 || playerCounter === 6){
-      refreshPage()
+    if (computerCounter === 5 || playerCounter === 5){
+     newDiv.textContent =  "please hit reset"
+     document.body.appendChild(newDiv)
     }
-    if ( computerCounter === 5){
-      newDiv.textContent = `game over, please hit reset to play again`;
-      result.appendChild(newDiv);
-    }
-    if (playerScore === 5) {
-      newDiv.textContent = `You've won, Please hit reset to play again`;
-      result.appendChild(newDiv);
+    if ( computerCounter > 5 || playerScore > 5){
+  refreshPage()
     }
     playerScore.textContent = `Player: ${playerCounter}`
     computerScore.textContent = `Computer: ${computerCounter}`
