@@ -11,19 +11,21 @@ let outcome;
 let playerScore = document.getElementById('playerScore');
 let computerScore = document.getElementById('computerScore');
 let rstbtn = document.getElementById('rstbtn');
-rstbtn.addEventListener("click", refreshPage)
-
+rstbtn.addEventListener("click", refreshPage);
+playerScore.textContent = `Player: `
+computerScore.textContent = `Computer: `
 function refreshPage(){
   window.location.reload();
 } 
 function playRound(player, computer) {
+ 
+  
   function displayScore() {
     if (computerCounter === 5 || playerCounter === 5){
-     newDiv.textContent =  "please hit reset"
-     document.body.appendChild(newDiv)
-    }
-    if ( computerCounter > 5 || playerScore > 5){
-  refreshPage()
+      newDiv.textContent = `You ${outcome}`;
+      result.appendChild(newDiv);
+     playerCounter = 0;
+     computerCounter = 0;
     }
     playerScore.textContent = `Player: ${playerCounter}`
     computerScore.textContent = `Computer: ${computerCounter}`
@@ -34,7 +36,6 @@ function playRound(player, computer) {
       newDiv.className = "draw";
       newDiv.textContent = `Its a Draw, Lets go again`;
       result.appendChild(newDiv);
-      setTimeout(() => newDiv.remove(), 1000);
     }
     displayDrawCounter();
   } else if (
@@ -42,29 +43,25 @@ function playRound(player, computer) {
     (player === "paper" && computer === "scissor") ||
     (player === "rock" && computer === "paper")
   ) {
+    computerCounter++;
     outcome = "lose";
     function displayLoseCounter() {
       newDiv.textContent = `${computer} beats ${player} You Lose!`;
       newDiv.className = "lose";
       result.appendChild(newDiv);
-      setTimeout(() => newDiv.remove(), 1000);
     }
-    computerCounter++;
     displayLoseCounter();
-    result.appendChild(newDiv);
   } else {
+    playerCounter++;
     outcome = "win"
     function displayWinCounter() {
       newDiv.textContent = `${player} beats ${computer}, You Win`;
       newDiv.className = "win";
       result.appendChild(newDiv);
-      setTimeout(() => newDiv.remove(), 1000);
     }
-    playerCounter++;
     displayWinCounter();
   }
   displayScore();
-
 }
 buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
