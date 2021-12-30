@@ -8,7 +8,7 @@
     background: -moz-linear-gradient(left, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
     background: -webkit-linear-gradient(left, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
     background: linear-gradient(to right, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
-    border: 2px solid cadetblue;
+    border: 8px dashed rgb(102, 5, 94);
     min-width: 300px;
     min-height: 100vh;  
     display: grid;
@@ -18,7 +18,7 @@
     
 }
 #title{
-  border: 8px dashed rgb(102, 5, 94);
+ 
   display: grid;
   align-items: center;
   justify-items: center;
@@ -27,7 +27,6 @@
 
 }
 #buttonsWrapper{
-    border: 10px solid black;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
@@ -54,7 +53,7 @@
 .draw{
     
 font-family: "Times New Roman", Times, serif;
-font-size: 30px;
+font-size: 25px;
 letter-spacing: 0px;
 word-spacing: 0px;
 color: #332f2f;
@@ -66,19 +65,17 @@ text-transform: none;
 }
 .win{
 font-family: "Times New Roman", Times, serif;
-font-size: 30px;
+font-size: 25px;
 letter-spacing: 2px;
 word-spacing: 1px;
 color: #048a30;
 font-weight: 200;
-text-decoration: none;
-font-style: normal;
-font-variant:normal;
+text-transform: capitalize;
 
 }
 .lose{
 font-family: "Times New Roman", Times, serif;
-font-size: 20px;
+font-size: 25px;
 letter-spacing: 0px;
 word-spacing: 1px;
 color: #9e0000;
@@ -86,33 +83,46 @@ font-weight: 100;
 text-decoration: none;
 font-style: normal;
 font-variant:small-caps;
-text-transform:lowercase;
+text-transform: capitalize;
 }
 #playerScore{
-border: 2px solid black;
+
+color: rgb(1, 102, 1);
+font-size: 23px;
+margin-bottom: -30px;
+
+
 }
 #computerScore{
-    border: 2px solid black;
+color: rgb(192, 2, 2);
+font-size: 23px;
+
+
+
 
 }
 #result{
-    border: 10px solid rgb(30, 70, 156);
+
     display: grid;
-    grid-template-columns: 1fr 1fr ;  
+    grid-template-columns: 1.5fr 1fr ;
+      
 }
-.scoreContainer{
+#scoreContainer{
+display:grid;
+
+
+}
+#score{
 display: grid;
 align-items: center;
-text-align: center;
-}
-.score{
-display: grid;
-text-align: center;
-align-items: center;
+margin-top: -50px;
+margin-left: 40px;
+
+
 }
 
 #resetButton{
-    border: 2px solid rgb(211, 208, 17);
+   
     display: grid;
     align-items: center;
     justify-items: center;
