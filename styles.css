@@ -1,27 +1,8 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-#buttonsWrapper{
-    display: flex;
-    height: 300px;
-    width: 800px;
-    align-items: center;
-    justify-content: center;
-    gap: 180px;
-    margin-left: 500px;
-}
-.buttons{
-    height: 52px;
-    cursor: pointer;
-}
-.buttons:hover{
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.5);
-    color: #ff7a59;
-    background: grey;
-  }
 #wrapper{
     background: #CE8ECE;
     background: -moz-linear-gradient(left, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
@@ -29,13 +10,49 @@
     background: linear-gradient(to right, #CE8ECE 0%, #23A49C 50%, #C59CA9 100%);
     border: 2px solid cadetblue;
     min-width: 300px;
-    height: 60em;  
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;  
+    display: grid;
+
+
    
     
 }
+#title{
+  border: 8px dashed rgb(102, 5, 94);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+
+
+}
+#buttonsWrapper{
+    border: 10px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.buttons{
+    border-radius: 50%;
+    border: 4px dotted rgb(56, 3, 87);
+    padding: 10px;
+
+
+    
+    cursor: pointer;
+}
+.buttons:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.5);
+    color: #ff7a59;
+    background: transparent;
+  }
 .draw{
+    
 font-family: "Times New Roman", Times, serif;
 font-size: 30px;
 letter-spacing: 0px;
@@ -71,33 +88,45 @@ font-style: normal;
 font-variant:small-caps;
 text-transform:lowercase;
 }
-#result{
-    text-align: center;
-    margin-left: -90px;
+#playerScore{
+border: 2px solid black;
 }
+#computerScore{
+    border: 2px solid black;
+
+}
+#result{
+    border: 10px solid rgb(30, 70, 156);
+    display: grid;
+    grid-template-columns: 1fr 1fr ;  
+}
+.scoreContainer{
+display: grid;
+align-items: center;
+text-align: center;
+}
+.score{
+display: grid;
+text-align: center;
+align-items: center;
+}
+
 #resetButton{
-    text-align: center;
+    border: 2px solid rgb(211, 208, 17);
+    display: grid;
+    align-items: center;
+    justify-items: center;
 }
 #rstbtn{
-    background: #239ba4;
-    height: 40px;
-    width: 60px;
+    background: #25719c;
+    height: 60px;
+    width: 80px;
     color: white;
     cursor: pointer;
-    margin-left: -90px;
-    margin-top: 20px;
+    border-radius: 6px;
 }
 #rstbtn:hover{
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.1);
-  }
-  #title{
-    text-align: center; 
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-             0px 8px 13px rgba(0,0,0,0.1),
-             0px 18px 23px rgba(0,0,0,0.1);
-             word-spacing: 150px;
-    margin-left: -130px;
- 
   }
